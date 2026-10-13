@@ -1,0 +1,78 @@
+# ============================================================
+#  Steam_RecSys  .gitignore
+# ============================================================
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.mypy_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---------- 前端依赖与构建产物 ----------
+node_modules/
+steam-frontend/node_modules/
+steam-frontend/dist/
+steam-frontend/dist-ssr/
+steam-frontend/.vite/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.local
+
+# ---------- 大数据集与训练产物（体积过大，不纳入版本库）----------
+# 复现方式见 README「数据准备」与「模型训练」章节
+data/raw_data/
+data/processed_data/
+*.pkl
+*.h5
+*.pt
+*.ckpt
+*.onnx
+*.npy
+*.npz
+*.json.gz
+*.csv
+
+# 例外：保留目录占位文件，保证 clone 后的目录结构完整
+!data/.gitkeep
+!static/avatars/.gitkeep
+
+# ---------- 敏感配置（切勿上传）----------
+config.py
+.env
+.env.*
+!.env.example
+
+# ---------- 运行时产生的上传文件 ----------
+static/avatars/*
+!static/avatars/.gitkeep
+
+# ---------- 日志与临时文件 ----------
+*.log
+logs/
+tmp/
+temp/
+~$*
+
+# ---------- 编辑器 / 操作系统 ----------
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+desktop.ini
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

@@ -1,0 +1,35 @@
+# ============================================================
+#  Steam_RecSys 后端 / 算法依赖
+#  Python 3.9 ~ 3.11（建议 3.10）
+#  安装：pip install -r requirements.txt
+# ============================================================
+
+# ---------- Web 服务 ----------
+Flask==3.0.3
+Flask-Cors==4.0.1
+Werkzeug==3.0.3
+PyMySQL==1.1.2
+SQLAlchemy==2.0.34
+
+# ---------- 数据处理 ----------
+numpy==1.26.4
+pandas==2.3.3
+scipy==1.16.2
+scikit-learn==1.7.2
+
+# ---------- 推荐算法 ----------
+lightfm==1.17
+
+# ---------- 文本语义特征（BERT）----------
+# torch 请按自己的 CUDA 版本安装，例如：
+#   pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+torch==2.5.1
+transformers==4.46.0
+tqdm==4.66.5
+
+# ---------- 可视化 ----------
+matplotlib==3.10.6
+seaborn==0.13.2
+
+# ---------- 网络请求 ----------
+requests==2.32.3
